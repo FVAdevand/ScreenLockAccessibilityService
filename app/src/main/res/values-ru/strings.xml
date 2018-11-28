@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">Возможность блокировать телефон при помощи ярлыка на экране</string>
+    <string name="label_accessibility_service">Блокировка экрана</string>
+    <string name="message_disabled_shortcut">Пожалуйста включите сервис в специальных возможностях телефона</string>
+    <string name="label_long_shortcut">Блокировка экрана</string>
+</resources>

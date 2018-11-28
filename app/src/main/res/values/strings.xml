@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Screen Lock</string>
+    <string name="accessibility_service_description">Ability lock screen on desktop shortcut</string>
+    <string name="label_accessibility_service">Screen lock shortcut</string>
+    <string name="message_disabled_shortcut">Please enable Accessibility Service</string>
+    <string name="label_short_shortcut" translatable="false">Lock</string>
+    <string name="label_long_shortcut">Screen Lock button</string>
+</resources>
