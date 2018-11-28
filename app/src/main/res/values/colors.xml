@@ -3,6 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorBackgroundShortcutApp">@android:color/white</color>
-    <color name="colorBackgroundShortcutLock">#2979FF</color>
+    <color name="colorBackgroundLauncher">@android:color/white</color>
+    <color name="colorBackgroundShortcut">#2979FF</color>
 </resources>

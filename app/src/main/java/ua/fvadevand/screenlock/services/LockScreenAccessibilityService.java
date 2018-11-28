@@ -45,7 +45,7 @@ public class LockScreenAccessibilityService extends AccessibilityService {
             ShortcutInfo pinShortcutInfo = new ShortcutInfo.Builder(this, SHORTCUT_ID)
                     .setShortLabel(getString(R.string.label_short_shortcut))
                     .setLongLabel(getString(R.string.label_long_shortcut))
-                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_adaptive_shortcut))
+                    .setIcon(Icon.createWithResource(this, R.mipmap.ic_shortcut))
                     .setIntent(new Intent(this, MainActivity.class)
                             .setAction(ACTION_SCREEN_LOCK))
                     .build();
