@@ -13,7 +13,7 @@ android {
         versionName "1.0"
         applicationVariants.all { variant ->
             variant.outputs.all { output ->
-                def project = "reminders"
+                def project = "screenlock"
                 def SEP = "_"
                 def buildType = variant.variantData.variantConfiguration.buildType.name
                 def version = variant.versionName + '.' + versionCode
