@@ -1,24 +1,33 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     def env = System.getenv()
     defaultConfig {
         applicationId "ua.fvadevand.screenlock"
         minSdkVersion 28
-        targetSdkVersion 28
-        versionCode 1
+        targetSdkVersion 29
+        versionCode 3
         versionName "1.0"
         applicationVariants.all { variant ->
             variant.outputs.all { output ->
-                def buildName = env.getOrDefault('BUILD_FILE_NAME', "screen_lock_" + variant.versionName + ".apk")
+                def project = "reminders"
+                def SEP = "_"
+                def buildType = variant.variantData.variantConfiguration.buildType.name
+                def version = variant.versionName + '.' + versionCode
+                def date = new Date()
+                def formattedDate = date.format('ddMMyy_HHmm')
+                def buildName = env.getOrDefault('BUILD_FILE_NAME', project + SEP + version + SEP + buildType + SEP + formattedDate + ".apk")
                 outputFileName = buildName
             }
         }
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,5 +39,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+}
+repositories {
+    mavenCentral()
 }

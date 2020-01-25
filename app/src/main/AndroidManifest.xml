@@ -9,10 +9,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity"
+            android:name="ua.fvadevand.screenlock.ui.MainActivity"
             android:theme="@android:style/Theme.NoDisplay" />
         <service
             android:name=".services.LockScreenAccessibilityService"
